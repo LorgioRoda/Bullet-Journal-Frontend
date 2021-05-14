@@ -1,5 +1,5 @@
 import React from 'react'
-import SCHome from './Home.styled';
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -8,7 +8,9 @@ function Home() {
                 <h1>Bullet Journal</h1>
                 <p>Description</p>
                 <div className="home__bottom">
-                    
+                    <Link to="/profile">
+                    <buttom>here</buttom>
+                    </Link>
                 </div>
             </div>
         </div>
