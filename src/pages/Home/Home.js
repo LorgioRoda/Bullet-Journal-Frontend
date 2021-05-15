@@ -1,18 +1,19 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import SCHome from './Home.styled';
 
 function Home() {
     return (
         <div>
-            <div className="home">
+            <SCHome>
                 <h1>Bullet Journal</h1>
                 <p>Description</p>
                 <div className="home__bottom">
-                    <Link to="/profile">
+                    <Link to="/task">
                     <buttom>here</buttom>
                     </Link>
                 </div>
-            </div>
+            </SCHome>
         </div>
     )
 }
