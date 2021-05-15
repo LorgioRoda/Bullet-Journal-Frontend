@@ -10,9 +10,9 @@ export default class task extends Component {
     this.taskService = new TaskService();
   }
   componentDidMount(){
-      console.log(this.taskService.get())    ///Info response.data
       this.taskService.get()
       .then(response => {
+          console.log(response.data)    ///Info response.data
       })
       .catch(err => console.error(err))
   }
