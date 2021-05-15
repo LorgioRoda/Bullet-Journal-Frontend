@@ -12,7 +12,9 @@ function Home() {
           <Text as="p">Description</Text>
           <div className="home__container__bottom">
             <Link to="/task">
-             
+                <SelectButtom>
+                    Ready
+                </SelectButtom>
             </Link>
           </div>
         </div>
