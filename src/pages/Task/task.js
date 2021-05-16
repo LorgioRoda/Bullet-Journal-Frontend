@@ -12,7 +12,7 @@ export default class task extends Component {
   componentDidMount(){
       this.taskService.get()
       .then(response => {
-          console.log(response.data)    ///Info response.data
+          this.setState({ tasks: response.data });   ///Info response.data
       })
       .catch(err => console.error(err))
   }
