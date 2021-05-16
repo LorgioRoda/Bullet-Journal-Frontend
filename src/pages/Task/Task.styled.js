@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-const SCTask = styled.section`
-  background-color: black;
-  margin-top: 500px;
-`;
-
-export default SCTask;
-=======
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const SCTasklist = styled.section`
   min-height: 100vh;
@@ -28,4 +20,3 @@ const SCTasklist = styled.section`
 `;
 
 export default SCTasklist;
->>>>>>> dev
