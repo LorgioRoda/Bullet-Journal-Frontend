@@ -28,7 +28,7 @@ export default class task extends Component {
     const {tasks} = this.state;
     return tasks.map(task => {
       return (
-        <Task key={task.id} {...task} />
+        <Task refreshState={()=> this.refreshState()} key={Task.id} {...task} />
       )
     })
   }
