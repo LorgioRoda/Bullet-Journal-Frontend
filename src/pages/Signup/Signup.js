@@ -54,7 +54,7 @@ class Signup extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.signup(this.state.fields);
+    this.props.signup(this.state.fields); //props de los inputs del formulario
   }
 
   handleChange(event) {
@@ -105,7 +105,7 @@ class Signup extends Component {
           />
         </div>
 
-        <SelectButtom type="submit">Create user</SelectButtom>
+        <SelectButtom type="submit">Crear usuario</SelectButtom>
       </form>
     );
   }
