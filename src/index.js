@@ -7,12 +7,15 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme"
 import "./reset.css"
+import { AuthProvider } from "./context/auth.context";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <ThemeProvider theme={theme}>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
       </ThemeProvider>
     </Router>
   </React.StrictMode>,
