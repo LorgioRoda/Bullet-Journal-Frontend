@@ -7,22 +7,15 @@ function Home() {
   return (
     <div>
       <SCHome>
-        <div className="home">
-          <Text className="h1-home" as="h1">
+        <div className="div-h1">
+          <Text className="h1" as="h1">
             Bullet Journal
           </Text>
-          <img
-            className="imagen"
-            src="https://s3.amazonaws.com/ft-docs/en/to-do-list-2.jpg"
-            alt="tareas"
-          ></img>
-          <Text className="description" as="p">
-            Descripción:
-          </Text>
           <Text className="description-extends" as="p">
-            Aplicación para crear listas de Tareas y Habitos de vida.<br></br>
-            Nunca mas se te olvidara nada.
+            La App de TAREAS que te hace la vida mas FÁCIL.
           </Text>
+          <img className="imagen" src="../../../movil.png" alt="tareas"></img>
+
           <div className="home-container-bottom">
             <Link to="/task">
               <SelectButtom className="boton-ready">Ready</SelectButtom>
