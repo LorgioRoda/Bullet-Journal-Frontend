@@ -8,13 +8,24 @@ function Home() {
     <div>
       <SCHome>
         <div className="home">
-          <Text as="h1">Bullet Journal</Text>
-          <Text as="p">Description</Text>
-          <div className="home__container__bottom">
+          <Text className="h1-home" as="h1">
+            Bullet Journal
+          </Text>
+          <img
+            className="imagen"
+            src="https://s3.amazonaws.com/ft-docs/en/to-do-list-2.jpg"
+            alt="tareas"
+          ></img>
+          <Text className="description" as="p">
+            Descripción:
+          </Text>
+          <Text className="description-extends" as="p">
+            Aplicación para crear listas de Tareas y Habitos de vida.<br></br>
+            Nunca mas se te olvidara nada.
+          </Text>
+          <div className="home-container-bottom">
             <Link to="/task">
-                <SelectButtom>
-                    Ready
-                </SelectButtom>
+              <SelectButtom className="boton-ready">Ready</SelectButtom>
             </Link>
           </div>
         </div>
