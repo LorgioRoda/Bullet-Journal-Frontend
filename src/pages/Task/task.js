@@ -3,6 +3,7 @@ import TaskService from "../../Services/task.service";
 import Text from '../../components/text';
 import SCTasklist from "./Task.styled"
 import CreateTask from "../../components/CreateTask/CreateTask";
+import Task from "../../components/Task/Task";
 export default class task extends Component {
   constructor(props) {
     super(props);
@@ -27,9 +28,7 @@ export default class task extends Component {
     const {tasks} = this.state;
     return tasks.map(task => {
       return (
-        <div key={task.id}>
-          <Text>{task.name}</Text>
-        </div>
+        <Task key={task.id} {...task} />
       )
     })
   }
