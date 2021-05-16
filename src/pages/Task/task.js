@@ -12,22 +12,21 @@ export default class task extends Component {
     };
     this.taskService = new TaskService();
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   componentDidMount() {
     this.taskService
       .get()
       .then((response) => {
         console.log(response.data); ///Info response.data
-=======
+
   componentDidMount(){
       this.taskService.get()
       .then(response => {
           this.setState({ tasks: response.data });   ///Info response.data
->>>>>>> dev
+
       })
       .catch((err) => console.error(err));
-=======
+
   refreshState(){
     this.taskService
       .get()
@@ -47,15 +46,9 @@ export default class task extends Component {
         <Task key={task.id} {...task} />
       )
     })
->>>>>>> dev
+
   }
   render() {
-<<<<<<< HEAD
-    return (
-      <div>
-        <p>Hola</p>
-      </div>
-=======
     const {tasks} = this.state
     return (
       <SCTasklist>
@@ -69,7 +62,6 @@ export default class task extends Component {
         <CreateTask refreshState={()=> this.refreshState()}/>
         </div>
       </SCTasklist>
->>>>>>> dev
     );
   }
 }
