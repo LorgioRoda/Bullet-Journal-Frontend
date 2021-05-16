@@ -1,16 +1,9 @@
 import React, { Component } from "react";
 import TaskService from "../../Services/task.service";
-<<<<<<< HEAD
-import SelectButtom from "../../components/SelectButtom/SelectButtom";
-import SCTask from "./Task.styled";
-import Text from "./Task.styled";
-
-=======
 import Text from '../../components/text';
 import SCTasklist from "./Task.styled"
 import CreateTask from "../../components/CreateTask/CreateTask";
 import Task from "../../components/Task/Task";
->>>>>>> dev
 export default class task extends Component {
   constructor(props) {
     super(props);
