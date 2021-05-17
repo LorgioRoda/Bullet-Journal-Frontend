@@ -14,8 +14,7 @@ function Home() {
           <Text className="description-extends" as="p">
             La App de TAREAS que te hace la vida mas FÁCIL.
           </Text>
-          <img className="imagen" src="../../../movil.png" alt="tareas"></img>
-
+          <img className="imagen" src="../../../lapiz.png" alt="tareas"></img>
           <div className="home-container-bottom">
             <Link to="/task">
               <SelectButtom className="boton-ready">Ready</SelectButtom>
