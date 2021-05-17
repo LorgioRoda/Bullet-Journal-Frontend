@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import SCNavbar from './SCNavbar';
-import { NavLink, Link } from 'react-router-dom';
-import { withAuth } from '../../context/auth.context';
+import React, { Component } from "react";
+import SCNavbar from "./SCNavbar";
+import { NavLink, Link } from "react-router-dom";
+import { withAuth } from "../../context/auth.context";
 
 class Navbar extends Component {
   state = {
@@ -16,34 +16,44 @@ class Navbar extends Component {
   logout = (e) => {
     e.preventDefault();
     this.props.logout();
-  }
+  };
 
   render() {
     return (
       <>
         <SCNavbar>
-          <img src='#' alt='#' />
+          <img className="lapiz-logo" src="../../../lapiz.png" alt="lapiz" />
 
-          <div className='nav-menu'>
-            <NavLink to='/'>
+          <div className="nav-menu">
+            <NavLink className="link-navbar" to="/">
               Home
             </NavLink>
-            <NavLink to='/signup'>
+            <NavLink className="link-navbar" to="/signup">
               Signup
             </NavLink>
-            <NavLink to='/login'>
+            <NavLink className="link-navbar" to="/login">
               login
             </NavLink>
-            <p>
-              {`Bienvenido ${this.props.user}`}
-            </p>
+            <p className="link-navbar">{`Bienvenido ${this.props.user}`}</p>
             <a href="/" onClick={(e) => this.showMenu(e)}>
-              <img src='#' alt='Usuario' />
+              <img
+                className="hamburguesa"
+                src="../../../hamburguesa.png"
+                alt="Usuario"
+              />
             </a>
             {this.state.showUserMenu ? (
-              <div className='user-menu'>
-                <Link to='/profile-edit'>Edit Profile</Link>
-                <Link to='/logout' onClick={(e)=>this.logout(e)}>Logout</Link>
+              <div className="link-navbar2">
+                <Link className="link-navbar" to="/profile-edit">
+                  Edit Profile
+                </Link>
+                <Link
+                  className="link-navbar"
+                  to="/logout"
+                  onClick={(e) => this.logout(e)}
+                >
+                  Logout
+                </Link>
               </div>
             ) : null}
           </div>
