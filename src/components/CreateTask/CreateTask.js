@@ -43,7 +43,7 @@ export default class CreateTask extends Component {
               this.props.refreshState();
           })
     })
-    .catch(err => console.errors(err))
+    .catch(err => console.error(err))
   }
   handleChange(event) {
     const { name, value } = event.target;

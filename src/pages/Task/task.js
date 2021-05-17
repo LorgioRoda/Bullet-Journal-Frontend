@@ -24,11 +24,21 @@ export default class task extends Component {
   componentDidMount() {
     this.refreshState();
   }
+<<<<<<< HEAD
   displayTasks() {
     const { tasks } = this.state;
     return tasks.map((task) => {
       return <Task key={task.id} {...task} />;
     });
+=======
+  displayTasks(){
+    const {tasks} = this.state;
+    return tasks.map(task => {
+      return (
+        <Task refreshState={()=> this.refreshState()} key={Task.id} {...task} />
+      )
+    })
+>>>>>>> 5bad84941bf2ee8ca8d7ee4ad2dede543a0b03bc
   }
   render() {
     const { tasks } = this.state;
