@@ -35,13 +35,14 @@ class Navbar extends Component {
               login
             </NavLink>
             <p>
-              {`Bienvenido ${this.props.user}`}
+              Bienvenido
             </p>
             <a href="/" onClick={(e) => this.showMenu(e)}>
               <img src='#' alt='Usuario' />
             </a>
             {this.state.showUserMenu ? (
               <div className='user-menu'>
+                <Link to="/profile/:id">Perfil</Link>
                 <Link to='/profile-edit'>Edit Profile</Link>
                 <Link to='/logout' onClick={(e)=>this.logout(e)}>Logout</Link>
               </div>
