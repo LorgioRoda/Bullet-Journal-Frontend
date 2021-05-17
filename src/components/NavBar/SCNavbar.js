@@ -15,7 +15,7 @@ const SCNavbar = styled.nav`
   }
 
   .link-navbar {
-    margin-right: 15px;
+    margin-right: 25px;
     font-size: 16px;
     margin-top: 4.5px;
     color: white;

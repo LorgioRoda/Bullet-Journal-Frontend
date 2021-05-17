@@ -97,13 +97,13 @@ class Login extends Component {
               </div>
 
               <SelectButtom className="boton" type="submit">
-                Login
+                Log In
               </SelectButtom>
               <hr className="hr"></hr>
               <p className="p-hr">¿Aún no estas REGISTRADO?</p>
               <Link to="/signup">
                 <SelectButtom className="boton2" type="submit">
-                  Signup
+                  Sign Up
                 </SelectButtom>
               </Link>
             </form>

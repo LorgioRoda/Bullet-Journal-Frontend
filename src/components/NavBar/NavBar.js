@@ -29,10 +29,10 @@ class Navbar extends Component {
               Home
             </NavLink>
             <NavLink className="link-navbar" to="/signup">
-              Signup
+              Sign Up
             </NavLink>
             <NavLink className="link-navbar" to="/login">
-              Login
+              Log In
             </NavLink>
             <a
               className="hamburguesa"
