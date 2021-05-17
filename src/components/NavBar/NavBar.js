@@ -32,7 +32,7 @@ class Navbar extends Component {
               Signup
             </NavLink>
             <NavLink to='/login'>
-              login
+              Login
             </NavLink>
             <p>
               Bienvenido
