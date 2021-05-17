@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SCNavbar from './Navbar.styled';
+import SCNavbar from './SCNavbar';
 import { NavLink, Link } from 'react-router-dom';
 import { withAuth } from '../../context/auth.context';
 
@@ -20,24 +20,25 @@ class Navbar extends Component {
 
   render() {
     return (
+      <>
         <SCNavbar>
           <img src='#' alt='#' />
 
           <div className='nav-menu'>
-            <NavLink to='/' activeStyle>
+            <NavLink to='/'>
               Home
             </NavLink>
-            <NavLink to='/signup' activeStyle>
-              Registrrate
+            <NavLink to='/signup'>
+              Signup
             </NavLink>
-            <NavLink to='/login' activeStyle>
-              Conectate
+            <NavLink to='/login'>
+              login
             </NavLink>
             <p>
-              {`Welcome ${this.props.user.firstName}`}
+              {`Bienvenido ${this.props.user}`}
             </p>
             <a href="/" onClick={(e) => this.showMenu(e)}>
-              <img src='' alt='User' />
+              <img src='#' alt='Usuario' />
             </a>
             {this.state.showUserMenu ? (
               <div className='user-menu'>
@@ -47,6 +48,7 @@ class Navbar extends Component {
             ) : null}
           </div>
         </SCNavbar>
+      </>
     );
   }
 }

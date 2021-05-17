@@ -15,8 +15,8 @@ class AuthProvider extends React.Component {
   componentDidMount() {
     //call base data
     this.authService.isLoggedIn() //Si esta el usuario o no
-      .then((user) => {
-        this.setState({ isLoading: true, isLoading: false, user: user });
+      .then((response) => {
+        this.setState({ isLoading: false, isLoggedIn: true, user: response.data });
       })
       .catch(() => {
         this.setState({ isLoggedIn: false, isLoading: false, user: null });
@@ -26,14 +26,14 @@ class AuthProvider extends React.Component {
   signup = (data) => {
     this.authService
       .signup(data)
-      .then((user) => this.setState({ isLoggedIn: true, user: user }))
+      .then((response) => this.setState({ isLoggedIn: true, user: response.data }))
       .catch(() => this.setState({ isLoggedIn: false, user: null }));
   };
 
   login = (data) => {
     this.authService
-      .signup(data)
-      .then((user) => this.setState({ isLoggedIn: true, user: user }))
+      .login(data)
+      .then((response) => this.setState({ isLoggedIn: true, user: response.data }))
       .catch(() => this.setState({ isLoggedIn: false, user: null }));
   };
 

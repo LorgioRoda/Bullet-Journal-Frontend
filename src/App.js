@@ -7,10 +7,12 @@ import Signup from "./pages/Signup/Signup";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import AnonRoute from "./components/AnonRoute/AnonRoute"
 import Login from "./pages/Login/Login"
+import Dashboard from "./pages/Dashboard/Dashboard"
 
 function App() {
   return (
     <div className="App">
+      <Dashboard />
       <Switch>
         <Route exact path="/" component={Home} />
         <PrivateRoute path="/task" exact component={Task} /> {/* Path and Exact props */}
