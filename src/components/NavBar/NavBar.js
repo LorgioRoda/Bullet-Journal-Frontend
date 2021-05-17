@@ -43,8 +43,8 @@ class Navbar extends Component {
             </a>
             {this.state.showUserMenu ? (
               <div className="link-navbar2">
-                <Link className="link-navbar" to="/profile-edit">
-                  Edit Profile
+                <Link className="link-navbar" to="/profile">
+                    Profile
                 </Link>
                 <Link
                   className="link-navbar"

@@ -8,6 +8,7 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import AnonRoute from "./components/AnonRoute/AnonRoute"
 import Login from "./pages/Login/Login"
 import Dashboard from "./pages/Dashboard/Dashboard"
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <PrivateRoute path="/task" exact component={Task} /> {/* Path and Exact props */}
+        <PrivateRoute exact path='/profile' component={Profile} />
         <AnonRoute exact path="/signup" component={Signup} redirectPath="/"/>
         <AnonRoute exact path="/login" component={Login}/>
       </Switch>
