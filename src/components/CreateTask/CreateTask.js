@@ -28,22 +28,26 @@ export default class CreateTask extends Component {
   handleSubmit(event) {
     event.preventDefault();
     //Create new task with API
-    this.taskService.create(this.state.fields)
-    .then(()=> {
-        console.log('Created')
+    this.taskService
+      .create(this.state.fields)
+      .then(() => {
+        console.log("Created");
         //Llamamos a la funcion que Task nos ha pasado como prop
-        this.setState({
+        this.setState(
+          {
             fields: {
               name: "",
             },
             errors: {
               name: null,
             },
-          }, () => {
-              this.props.refreshState();
-          })
-    })
-    .catch(err => console.error(err))
+          },
+          () => {
+            this.props.refreshState();
+          }
+        );
+      })
+      .catch((err) => console.error(err));
   }
   handleChange(event) {
     const { name, value } = event.target;
@@ -66,7 +70,7 @@ export default class CreateTask extends Component {
           type="text"
           value={fields.name}
           onChange={(e) => this.handleChange(e)}
-          name = "name"
+          name="name"
         />
 
         <SelectButtom type="submit">Crear tarea</SelectButtom>
