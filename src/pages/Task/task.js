@@ -24,6 +24,7 @@ export default class task extends Component {
   componentDidMount() {
     this.refreshState();
   }
+<<<<<<< HEAD
   displayTasks(){
     const {tasks} = this.state;
     return tasks.map(task => {
@@ -31,6 +32,13 @@ export default class task extends Component {
         <Task refreshState={()=> this.refreshState()} key={task.id} {...task} />
       )
     })
+=======
+  displayTasks() {
+    const { tasks } = this.state;
+    return tasks.map((task) => {
+      return <Task key={task.id} {...task} />;
+    });
+>>>>>>> devadri
   }
   render() {
     const { tasks } = this.state;
