@@ -14,9 +14,7 @@ const SCHome = styled.section`
   width: 100%;  
   height: 700px;
   background-color: #89D6EC;
-  background-attachment: fixed;
   background-size: 100% 100%;
-  overflow: hidden;
   
 }
 ::selection {
@@ -26,7 +24,6 @@ const SCHome = styled.section`
 .h1 {
   margin-top:50px;
   cursor: default;
-  height: 100px;
   display: block;
   -webkit-animation: bounce .3s ease infinite alternate;
   font-family: 'Erica One', cursive;
