@@ -31,10 +31,8 @@ class Navbar extends Component {
             <NavLink className="link-navbar" to="/signup">
               Signup
             </NavLink>
-            <NavLink className="link-navbar" to="/login">
-              login
-            </NavLink>
-            <p className="link-navbar">{`Bienvenido ${this.props.user}`}</p>
+            <NavLink to="/login">Login</NavLink>
+            <p>Bienvenido</p>
             <a href="/" onClick={(e) => this.showMenu(e)}>
               <img
                 className="hamburguesa"
