@@ -14,18 +14,44 @@ const SCNavbar = styled.nav`
     flex-direction: row;
   }
 
-  .link-navbar2 {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-left: 270px;
-    margin-top: 30px;
-  }
-
   .link-navbar {
-    margin-right: 20px;
+    margin-right: 15px;
     font-size: 16px;
     margin-top: 4.5px;
+    color: white;
+  }
+
+  .link-navbar:hover {
+    color: transparent;
+    text-shadow: 1px 1px black;
+  }
+
+  .link-navbar2 {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    margin-left: 120px;
+    margin-top: 37px;
+    height: 80px;
+    width: 100px;
+    background: rgb(0, 110, 147);
+  }
+
+  .link-navbar3 {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100px;
+    height: 25px;
+    color: white;
+  }
+
+  .link-navbar3:hover {
+    color: transparent;
+    text-shadow: 1px 1px black;
   }
 
   .lapiz-logo {
@@ -34,9 +60,14 @@ const SCNavbar = styled.nav`
   }
 
   .hamburguesa {
-    width: 50px;
-    height: 25px;
+    font-size: 30px;
     margin-right: 10px;
+    color: white;
+  }
+
+  .hamburguesa:hover {
+    color: transparent;
+    text-shadow: 1px 1px black;
   }
 `;
 

@@ -31,22 +31,23 @@ class Navbar extends Component {
             <NavLink className="link-navbar" to="/signup">
               Signup
             </NavLink>
-            <NavLink to="/login">Login</NavLink>
-            <p>Bienvenido</p>
-            <a href="/" onClick={(e) => this.showMenu(e)}>
-              <img
-                className="hamburguesa"
-                src="../../../hamburguesa.png"
-                alt="Usuario"
-              />
+            <NavLink className="link-navbar" to="/login">
+              Login
+            </NavLink>
+            <a
+              className="hamburguesa"
+              href="/"
+              onClick={(e) => this.showMenu(e)}
+            >
+              ☰
             </a>
             {this.state.showUserMenu ? (
               <div className="link-navbar2">
-                <Link className="link-navbar" to="/profile-edit">
+                <Link className="link-navbar3" to="/profile-edit">
                   Edit Profile
                 </Link>
                 <Link
-                  className="link-navbar"
+                  className="link-navbar3"
                   to="/logout"
                   onClick={(e) => this.logout(e)}
                 >
