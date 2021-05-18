@@ -44,6 +44,12 @@ class AuthProvider extends React.Component {
       .catch((error) => console.error(error));
   };
 
+  edit = (data) => {
+    this.authService.edit(data)
+    .then(user => this.setState({ ...this.state, user: user.data}))
+    .catch(error => console.error(error))
+  }
+
   render() {
     const { isLoggedIn, isLoading, user } = this.state;
 
@@ -58,6 +64,7 @@ class AuthProvider extends React.Component {
           signup: this.signup,
           login: this.login,
           logout: this.logout,
+          edit: this.edit,
         }}
       >
         {" "}
@@ -76,7 +83,7 @@ const withAuth = (WrappedComponent) => {
     return(
     <Consumer>
       {(value) => {
-        const { isLoading, isLoggedIn, user, signup, login, logout } = value;
+        const { isLoading, isLoggedIn, user, signup, login, logout, edit } = value;
         return (
           <WrappedComponent
             {...value} //line 78
