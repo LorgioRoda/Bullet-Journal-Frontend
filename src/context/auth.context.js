@@ -40,7 +40,7 @@ class AuthProvider extends React.Component {
   logout = () => {
     this.authService
       .logout()
-      .then((user) => this.setState({ isLoggedIn: false, user: null }))
+      .then(() => this.setState({ isLoggedIn: false, user: null }))
       .catch((error) => console.error(error));
   };
 
@@ -86,7 +86,7 @@ const withAuth = (WrappedComponent) => {
         const { isLoading, isLoggedIn, user, signup, login, logout, edit } = value;
         return (
           <WrappedComponent
-            {...value} //line 78
+            {...value} //line 86
             {...props} //todas las props previas
           />
         );

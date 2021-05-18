@@ -53,6 +53,7 @@ class EditProfile extends Component {
     })
 
     this.props.edit(uploadData);
+    this.props.history.goBack()
   }
 
   handleChange(event){
