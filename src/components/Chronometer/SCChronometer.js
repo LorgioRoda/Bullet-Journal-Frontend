@@ -3,6 +3,9 @@ import styled from "styled-components";
 const SCChronometer = styled.section`
   .timer {
     width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .time {
     max-width: 400px;
@@ -15,10 +18,11 @@ const SCChronometer = styled.section`
     align-items: center;
     justify-content: center;
   }
-  .time img {
-    width: 100%;
-    height: 100%;
+  .imagen {
+    width: 500px;
+    height: 300px;
     position: absolute;
+    margin-top: 400px;
   }
   .time h2 {
     font-size: 100px;

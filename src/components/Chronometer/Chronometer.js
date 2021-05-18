@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import SCChronometer  from "../../components/Chronometer/SCChronometer";
-import {withAuth} from  "../../context/auth.context"
+import SCChronometer from "../../components/Chronometer/SCChronometer";
+import { withAuth } from "../../context/auth.context";
 
 class Chronometer extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class Chronometer extends Component {
     } else {
       this.counter = setInterval(() => {
         this.setState({ actualTime: this.state.actualTime + 0.1 });
-      }, 100);
+      }, 1000);
       this.setState({ btnPlayPause: "Pause" });
     }
   }
@@ -40,7 +40,11 @@ class Chronometer extends Component {
       <SCChronometer>
         <div className="timer">
           <div className="time">
-            <img src='#' alt="" />
+            <img
+              className="imagen"
+              src="../../../cronometro.png"
+              alt="Cronometro"
+            />
             <h2>{this.state.actualTime.toFixed(2)}</h2>
           </div>
           <div className="btns">
