@@ -71,6 +71,33 @@ const SCSignup = styled.section`
   .boton2:hover{
       background-color:rgb(0,170,0)
   }
+
+  .h2{
+  z-index:5;
+  position:absolute;
+  top: 65px;
+  left: 28%;
+  transform: rotate(-15deg);
+  margin-top:0px;
+  cursor: default;
+  display: block;
+  -webkit-animation: bounce .3s ease infinite alternate;
+  font-family: 'Erica One', cursive;
+  font-size: 60px;
+  color: #EFEFEF;
+  text-align: center;
+  line-height: 100px;
+  text-shadow: 0 1px 0 #006E93,
+               0 2px 0 #006E93,
+               0 3px 0 #006E93,
+               0 4px 0 #006E93,
+               0 5px 0 #006E93,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px #006E93;
+  }
 `;
 
 export default SCSignup;

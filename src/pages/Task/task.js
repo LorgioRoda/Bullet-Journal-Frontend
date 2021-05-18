@@ -41,6 +41,7 @@ export default class task extends Component {
     return (
       <SCTasklist>
         <div className="contenedor-principal">
+          <h2 className="h2">TASK</h2>
           <div className="card">
             <Text className="text" size="l" color="black">
               {tasks.length === 0

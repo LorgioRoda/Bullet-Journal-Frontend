@@ -77,6 +77,7 @@ class Signup extends Component {
     return (
       <SCSignup>
         <div className="contenedor-principal">
+          <h2 className="h2">SIGN UP</h2>
           <div className="border">
             <form className="form" onSubmit={(e) => this.handleSubmit(e)}>
               <div className="form-item">
@@ -117,9 +118,7 @@ class Signup extends Component {
                   onChange={(e) => this.handleChange(e)}
                 />
               </div>
-              <SelectButtom type="submit">
-                Sign Up
-              </SelectButtom>
+              <SelectButtom type="submit">Sign Up</SelectButtom>
             </form>
           </div>
         </div>

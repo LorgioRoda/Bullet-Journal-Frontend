@@ -24,7 +24,7 @@ const SCTasklist = styled.section`
   .card {
     width: 300px;
     height: 350px;
-    margin-top: 20px;
+    margin-top: 50px;
     border: 2px solid rgb(0, 110, 147);
     background-color: rgb(212, 230, 241);
     border-radius: 20px;
@@ -77,6 +77,32 @@ const SCTasklist = styled.section`
     margin-bottom: 10px;
   }
 
+  .h2{
+  z-index:5;
+  position:absolute;
+  top: 15px;
+  left: 32%;
+  transform: rotate(-25deg);
+  margin-top:0px;
+  cursor: default;
+  display: block;
+  -webkit-animation: bounce .3s ease infinite alternate;
+  font-family: 'Erica One', cursive;
+  font-size: 60px;
+  color: #EFEFEF;
+  text-align: center;
+  line-height: 100px;
+  text-shadow: 0 1px 0 #006E93,
+               0 2px 0 #006E93,
+               0 3px 0 #006E93,
+               0 4px 0 #006E93,
+               0 5px 0 #006E93,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px #006E93;
+  }
   
 `;
 

@@ -55,6 +55,30 @@ height:812px;
        color: rgb(0, 110, 147);
        font-size: 14px;
   }
+  
+  .h2{
+  position:absolute;
+  top: 40px;
+  margin-top:50px;
+  cursor: default;
+  display: block;
+  -webkit-animation: bounce .3s ease infinite alternate;
+  font-family: 'Erica One', cursive;
+  font-size: 60px;
+  color: #EFEFEF;
+  text-align: center;
+  line-height: 100px;
+  text-shadow: 0 1px 0 #006E93,
+               0 2px 0 #006E93,
+               0 3px 0 #006E93,
+               0 4px 0 #006E93,
+               0 5px 0 #006E93,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px #006E93;
+  }
 `;
 
 export default SCUser;

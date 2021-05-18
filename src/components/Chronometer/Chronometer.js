@@ -80,7 +80,7 @@ class Chronometer extends React.Component {
       <SCChronometer>
         <div className="contenedor-principal">
           <Text className="h1" as="h1">
-            Chronometer
+            & Chronometer
           </Text>
           <main className="main">
             <div className="display">

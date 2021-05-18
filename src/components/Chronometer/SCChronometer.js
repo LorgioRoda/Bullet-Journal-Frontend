@@ -151,6 +151,8 @@ const SCChronometer = styled.section`
 }
 
 .h1 {
+  margin-top:10px;
+  margin-left:10px;
   cursor: default;
   position: absolute;
   -webkit-animation: bounce .3s ease infinite alternate;

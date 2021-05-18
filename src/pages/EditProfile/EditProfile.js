@@ -77,6 +77,7 @@ class EditProfile extends Component {
     const { fields } = this.state;
     return (
       <SCEditProfile>
+        <h2 className="h2">EDIT PROFILE</h2>
         <div className="border">
           <form className="form" onSubmit={(e) => this.handleSubmit(e)}>
             <div className="form-item">

@@ -69,6 +69,7 @@ class Login extends Component {
     return (
       <SCLogin>
         <div className="contenedor-principal">
+          <h2 className="h2">LOGIN</h2>
           <div className="border">
             <form className="form" onSubmit={(e) => this.handleSubmit(e)}>
               <div className="form-item">

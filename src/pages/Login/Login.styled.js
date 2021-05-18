@@ -91,6 +91,33 @@ const SCLogin = styled.section`
       opacity: 100%;
       margin-top:125px;
   }
+
+  .h2{
+  z-index:5;
+  position:absolute;
+  top: 55px;
+  left: 32%;
+  transform: rotate(-15deg);
+  margin-top:0px;
+  cursor: default;
+  display: block;
+  -webkit-animation: bounce .3s ease infinite alternate;
+  font-family: 'Erica One', cursive;
+  font-size: 60px;
+  color: #EFEFEF;
+  text-align: center;
+  line-height: 100px;
+  text-shadow: 0 1px 0 #006E93,
+               0 2px 0 #006E93,
+               0 3px 0 #006E93,
+               0 4px 0 #006E93,
+               0 5px 0 #006E93,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px #006E93;
+  }
 `;
 
 export default SCLogin;

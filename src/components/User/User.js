@@ -5,6 +5,7 @@ export default function User({ user }) {
   return (
     <SCUser>
       <img className="foto-background" src={user.profile_Background} />
+      <h2 className="h2">PROFILE</h2>
       <div className="contenedor-principal">
         <div className="border">
           <img className="foto-perfil" src={user.photo} />
