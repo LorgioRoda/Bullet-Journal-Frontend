@@ -46,7 +46,6 @@ class EditProfile extends Component {
 
   handleSubmit(event){
     event.preventDefault();
-    console.log(this.state.fields);
     const uploadData = new FormData();
     Object.keys(this.state.fields).forEach(key => {
       uploadData.append(key, this.state.fields[key]);
