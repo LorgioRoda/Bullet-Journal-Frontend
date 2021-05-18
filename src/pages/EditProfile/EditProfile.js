@@ -17,7 +17,6 @@ const validators = {
     if(!value){
       message = 'Photo is required';
     }
-
     return message;
   },
 }
