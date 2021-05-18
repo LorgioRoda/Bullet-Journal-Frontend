@@ -1,13 +1,15 @@
-import { render } from '@testing-library/react'
-import React from 'react'
-import {withAuth} from "../../context/auth.context" 
+import React, { Component } from "react";
+import {withAuth} from "../../context/auth.context"
+import User from "../../components/User/User"
+import { Link } from "react-router-dom";
 
-export default function Profile() {
-    render()
+function Profile(props) {
     return (
         <div>
-            hola
-            console.log(this.props.user)       
+            <User user={props.user}/>
+            <Link to="/edit-profile">Edit</Link>
         </div>
     )
 }
+
+export default withAuth(Profile);
