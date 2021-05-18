@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
-const SCLogin = styled.section`
+const SCSignup = styled.section`
   display: flex;
   justify-content: center;
   align-item: center;
   background-color: #89d6ec;
-  
   }
 
   .contenedor-principal{
@@ -31,8 +30,6 @@ const SCLogin = styled.section`
 
   .form{
       margin: 30px;
-      
-      
   }
 
   .form-item{ 
@@ -40,8 +37,6 @@ const SCLogin = styled.section`
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    
-    
   }
 
   .label{
@@ -67,24 +62,6 @@ const SCLogin = styled.section`
     
   }
 
-  .hr{
-    margin-top: 25px;
-       background-color: rgb(0,110,147);
-       height: 3px;
-       
-  }
-  .p-hr{
-       margin-top: 25px;
-       font-size:12px;
-       color: rgb(0,110,147);
-       
-  }
-
-  .boton{
-      margin-top:10px;
-      
-  }
-
   .boton2{
       margin-top:10px;
       background-color: green;
@@ -94,13 +71,6 @@ const SCLogin = styled.section`
   .boton2:hover{
       background-color:rgb(0,170,0)
   }
-
-  .lapiz-login{
-      position:absolute;
-      z-index:1;
-      opacity: 100%;
-      margin-top:125px;
-  }
 `;
 
-export default SCLogin;
+export default SCSignup;

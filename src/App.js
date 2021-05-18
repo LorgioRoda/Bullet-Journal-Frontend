@@ -12,6 +12,7 @@ import Profile from "./pages/Profile/Profile";
 import EditProfile from "./pages/EditProfile/EditProfile";
 import ChronometerPage from "./pages/Chronometer/Chronometer"
 
+
 function App() {
   return (
     <div className="App">
