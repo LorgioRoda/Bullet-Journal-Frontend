@@ -53,7 +53,7 @@ export default class Habits extends Component {
           onChange={(e) => this.handleChange(e)}
           name="habits3"
         />
-        <SelectButtom onClick={this.handleFormVisibility} type="submit">Crear tarea</SelectButtom>
+        <SelectButtom onClick={this.handleFormVisibility} type="submit">Habitos</SelectButtom>
       </form>
     );
     }
