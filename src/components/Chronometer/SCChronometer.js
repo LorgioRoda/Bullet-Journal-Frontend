@@ -5,6 +5,7 @@ const SCChronometer = styled.section`
   justify-content: center;
   align-item: center;
   background-color: #89d6ec;
+  z-index:5;
   
   }
 
@@ -12,11 +13,12 @@ const SCChronometer = styled.section`
     margin-top: 0px;
     overflow: hidden;
     width: 500px;
-    height: 812px;
+    height: 450px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    
   }
 
   * {
@@ -54,7 +56,7 @@ const SCChronometer = styled.section`
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 50%;
     background-color: white;
-    margin-top: 100px;
+    margin-top: 110px;
     margin-bottom:480px;
   }
 
