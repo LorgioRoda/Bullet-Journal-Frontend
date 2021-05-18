@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
+import SCUser from "./User.styled";
 
-export default function User({user}) {
-    return (
-        <div>
-            <img src={user.profile_Background}/>
-            <img src={user.photo}/>
-            <h3>{user.username}</h3>
-            <p>{user.description}</p>
+export default function User({ user }) {
+  return (
+    <SCUser>
+      <img className="foto-background" src={user.profile_Background} />
+      <div className="contenedor-principal">
+        <div className="border">
+          <img className="foto-perfil" src={user.photo} />
+          <h3 className="h3">{user.username}</h3>
+          <p className="p">{user.description}</p>
         </div>
-    )
+      </div>
+    </SCUser>
+  );
 }

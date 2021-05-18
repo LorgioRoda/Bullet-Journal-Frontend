@@ -30,11 +30,12 @@ const SCNavbar = styled.nav`
     display: flex;
     position: absolute;
     flex-direction: column;
-    margin-left: 120px;
+    margin-left: 0px;
     margin-top: 37px;
-    height: 80px;
+    height: 150px;
     width: 100px;
     background: rgb(0, 110, 147);
+    z-index: 5;
   }
 
   .link-navbar3 {

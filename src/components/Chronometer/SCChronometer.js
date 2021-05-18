@@ -55,6 +55,7 @@ const SCChronometer = styled.section`
     border-radius: 50%;
     background-color: white;
     margin-top: 100px;
+    margin-bottom:480px;
   }
 
   .display {

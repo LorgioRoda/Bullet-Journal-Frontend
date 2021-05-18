@@ -38,7 +38,7 @@ const SCTasklist = styled.section`
   }
 
   .boton-check {
-    margin-left: 10px;
+    margin-left: 15px;
     margin-right: 10px;
     color: green;
   }

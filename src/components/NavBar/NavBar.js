@@ -45,7 +45,13 @@ class Navbar extends Component {
             {this.state.showUserMenu ? (
               <div className="link-navbar2">
                 <Link className="link-navbar3" to="/profile">
-                  Profile
+                  Perfil
+                </Link>
+                <Link className="link-navbar3" to="/chronometer">
+                  Cronometro
+                </Link>
+                <Link className="link-navbar3" to="/task">
+                  Tareas
                 </Link>
                 <Link
                   className="link-navbar3"
