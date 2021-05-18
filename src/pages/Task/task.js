@@ -40,16 +40,18 @@ export default class task extends Component {
     const { tasks } = this.state;
     return (
       <SCTasklist>
-        <div className="card">
-          <Text size="l" color="black">
-            {tasks.length === 0
-              ? "No tienes ninguna tarea para hoy"
-              : tasks.length === 1
-              ? "Sigue agregando mas tareas aqui"
-              : "Perfecto, llevas varias tareas para hoy"}
-          </Text>
-          {this.displayTasks()}
-          <CreateTask refreshState={() => this.refreshState()} />
+        <div className="contenedor-principal">
+          <div className="card">
+            <Text className="text" size="l" color="black">
+              {tasks.length === 0
+                ? "No tienes ninguna tarea para hoy"
+                : tasks.length === 1
+                ? "Sigue agregando mas tareas aqui"
+                : "Perfecto, llevas varias tareas para hoy"}
+            </Text>
+            {this.displayTasks()}
+            <CreateTask refreshState={() => this.refreshState()} />
+          </div>
         </div>
       </SCTasklist>
     );

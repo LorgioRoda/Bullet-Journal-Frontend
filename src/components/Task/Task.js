@@ -12,7 +12,7 @@ export default function Task({ name, done, priority, id, refreshState }) {
       .deleteOne(id)
       .then(() => {
         console.log("Delete");
-        refreshState()
+        refreshState();
       })
       .catch((err) => console.error());
   };
@@ -27,14 +27,19 @@ export default function Task({ name, done, priority, id, refreshState }) {
   };
   return (
     <SCTask>
-      <button onClick={() => update({ done: !done })}>
-        {done ? "Eliminar tarea" : "Listo"}
+      <button className="boton-check" onClick={() => update({ done: !done })}>
+        {done ? "☑" : "☐"}
       </button>
-      <Text>{name}</Text>
-      <button onClick={() => update({ priority: !priority })}>
-        {priority ? "Marcar como no prioritario" : "Marcar como prioritario"}
+      <Text className="text-check">{name}</Text>
+      <button
+        className="boton-check2"
+        onClick={() => update({ priority: !priority })}
+      >
+        {priority ? "☑  Priority" : "☐ Priority"}
       </button>
-      <button onClick={() => deleteTask()}>Eliminar</button>
+      <button className="boton-check3" onClick={() => deleteTask()}>
+        ✘
+      </button>
     </SCTask>
   );
 }

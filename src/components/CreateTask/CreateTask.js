@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TaskService from "../../Services/task.service";
 import SelectButtom from "../SelectButtom/SelectButtom";
+import SCTask2 from "../CreateTask/CreateTask.styled";
 
 const validators = {
   name: (value) => {
@@ -64,16 +65,19 @@ export default class CreateTask extends Component {
   render() {
     const { fields, errors } = this.state;
     return (
-      <form onSubmit={(e) => this.handleSubmit(e)}>
-        <input
-          type="text"
-          value={fields.name}
-          onChange={(e) => this.handleChange(e)}
-          name="name"
-        />
+      <SCTask2>
+        <form className="form" onSubmit={(e) => this.handleSubmit(e)}>
+          <input
+            className="input"
+            type="text"
+            value={fields.name}
+            onChange={(e) => this.handleChange(e)}
+            name="name"
+          />
 
-        <SelectButtom type="submit">Crear tarea</SelectButtom>
-      </form>
+          <SelectButtom type="submit">Crear tarea</SelectButtom>
+        </form>
+      </SCTask2>
     );
   }
 }
