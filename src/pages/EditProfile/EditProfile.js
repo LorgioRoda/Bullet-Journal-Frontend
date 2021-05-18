@@ -12,6 +12,14 @@ const validators = {
 
     return message;
   },
+  description: (value) => {
+    let message;
+    if(!value){
+      message = 'Description is required';
+    }
+
+    return message;
+  },
   photo: (value) => {
     let message;
     if(!value){
