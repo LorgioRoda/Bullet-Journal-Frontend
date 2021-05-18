@@ -1,60 +1,127 @@
 import React, { Component } from "react";
 import SCChronometer from "../../components/Chronometer/SCChronometer";
 import { withAuth } from "../../context/auth.context";
+import Text from "../Chronometer/SCChronometer";
 
-class Chronometer extends Component {
+class Chronometer extends React.Component {
   constructor(props) {
     super(props);
+
+    //: getInitialState() method
     this.state = {
-      actualTime: 0,
-      btnPlayPause: "Play",
+      minutes: 0,
+      seconds: 0,
+      millis: 0,
+      running: false,
     };
-    this.counter = null;
-    this.initTimer = this.initTimer.bind(this);
-    this.clearTimer = this.clearTimer.bind(this);
-    this.pauseTimer = this.pauseTimer.bind(this);
+
+    this._handleStartClick = this._handleStartClick.bind(this);
+    this._handleStopClick = this._handleStopClick.bind(this);
+    this._handleResetClick = this._handleResetClick.bind(this);
   }
-  initTimer() {
-    if (this.counter) {
-      this.pauseTimer();
-      this.setState({ btnPlayPause: "Play" });
-    } else {
-      this.counter = setInterval(() => {
-        this.setState({ actualTime: this.state.actualTime + 0.1 });
-      }, 1000);
-      this.setState({ btnPlayPause: "Pause" });
+
+  _handleStartClick(event) {
+    var _this = this;
+    if (!this.state.running) {
+      this.interval = setInterval(() => {
+        this.tick();
+      }, 100);
+
+      this.setState({ running: true });
     }
   }
-  pauseTimer() {
-    clearInterval(this.counter);
-    this.counter = null;
+
+  _handleStopClick(event) {
+    if (this.state.running) {
+      clearInterval(this.interval);
+      this.setState({ running: false });
+    }
   }
-  clearTimer() {
-    this.setState({ actualTime: 0 });
-    clearInterval(this.counter);
-    this.counter = null;
-    this.setState({ btnPlayPause: "Play" });
+
+  _handleResetClick(event) {
+    this._handleStopClick();
+    this.update(0, 0, 0);
   }
+
+  tick() {
+    let millis = this.state.millis + 1;
+    let seconds = this.state.seconds;
+    let minutes = this.state.minutes;
+
+    if (millis === 10) {
+      millis = 0;
+      seconds = seconds + 1;
+    }
+
+    if (seconds === 60) {
+      millis = 0;
+      seconds = 0;
+      minutes = minutes + 1;
+    }
+
+    this.update(millis, seconds, minutes);
+  }
+
+  zeroPad(value) {
+    return value < 10 ? `0${value}` : value;
+  }
+
+  update(millis, seconds, minutes) {
+    this.setState({
+      millis: millis,
+      seconds: seconds,
+      minutes: minutes,
+    });
+  }
+
   render() {
+    let run = this.state.running === true;
     return (
       <SCChronometer>
-        <div className="timer">
-          <div className="time">
-            <img
-              className="imagen"
-              src="../../../cronometro.png"
-              alt="Cronometro"
-            />
-            <h2>{this.state.actualTime.toFixed(2)}</h2>
-          </div>
-          <div className="btns">
-            <input
-              type="button"
-              value={this.state.btnPlayPause}
-              onClick={this.initTimer}
-            />
-            <input type="button" value="Clean" onClick={this.clearTimer} />
-          </div>
+        <div className="contenedor-principal">
+          <Text className="h1" as="h1">
+            Chronometer
+          </Text>
+          <main className="main">
+            <div className="display">
+              <div className="state">{run ? "TASKTIME" : "STOP"}</div>
+              <div className="segments">
+                <span className="mins">
+                  {this.zeroPad(this.state.minutes)}:
+                </span>
+                <span className="secs">
+                  {this.zeroPad(this.state.seconds)}{" "}
+                </span>
+                <span className="millis">.0{this.state.millis}</span>
+              </div>
+            </div>
+
+            <div className="actions">
+              <button
+                className={"btn start " + (run ? "disabled" : "")}
+                onClick={this._handleStartClick}
+              >
+                ►
+              </button>
+
+              <button
+                className={"btn stop " + (false == run ? "disabled" : "")}
+                onClick={this._handleStopClick}
+              >
+                ⥣
+              </button>
+
+              <button
+                className={
+                  "btn reset " +
+                  (this.state.seconds > 0 && false == run ? "" : "disabled")
+                }
+                onClick={this._handleResetClick}
+              >
+                ⟳
+              </button>
+            </div>
+          </main>
         </div>
       </SCChronometer>
     );
