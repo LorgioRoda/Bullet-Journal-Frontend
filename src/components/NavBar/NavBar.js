@@ -28,12 +28,13 @@ class Navbar extends Component {
             <NavLink className="link-navbar" to="/">
               Home
             </NavLink>
-            <NavLink className="link-navbar" to="/signup">
+
+            {/* <NavLink className="link-navbar" to="/signup">
               Sign Up
             </NavLink>
             <NavLink className="link-navbar" to="/login">
               Log In
-            </NavLink>
+            </NavLink> */}
             <a
               className="hamburguesa"
               href="/"
@@ -43,8 +44,8 @@ class Navbar extends Component {
             </a>
             {this.state.showUserMenu ? (
               <div className="link-navbar2">
-                <Link className="link-navbar3" to="/profile-edit">
-                  Edit Profile
+                <Link className="link-navbar3" to="/profile">
+                  Profile
                 </Link>
                 <Link
                   className="link-navbar3"

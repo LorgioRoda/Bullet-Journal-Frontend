@@ -31,7 +31,6 @@ export default class CreateTask extends Component {
     this.taskService
       .create(this.state.fields)
       .then(() => {
-        console.log("Created");
         //Llamamos a la funcion que Task nos ha pasado como prop
         this.setState(
           {
