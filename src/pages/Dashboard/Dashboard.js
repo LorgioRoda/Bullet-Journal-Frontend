@@ -1,6 +1,6 @@
-import React from 'react';
-import NavBar from '../../components/NavBar/NavBar';
-import { withAuth } from '../../context/auth.context';
+import React from "react";
+import NavBar from "../../components/NavBar/NavBar";
+import { withAuth } from "../../context/auth.context";
 
 function Dashboard(props) {
   return (

@@ -5,7 +5,6 @@ const SCLogin = styled.section`
   justify-content: center;
   align-item: center;
   background-color: #89d6ec;
-  
   }
 
   .contenedor-principal{
@@ -17,8 +16,6 @@ const SCLogin = styled.section`
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      
-    
   }
 
   .border{

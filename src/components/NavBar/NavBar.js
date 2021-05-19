@@ -28,13 +28,6 @@ class Navbar extends Component {
             <NavLink className="link-navbar" to="/">
               Home
             </NavLink>
-
-            {/* <NavLink className="link-navbar" to="/signup">
-              Sign Up
-            </NavLink>
-            <NavLink className="link-navbar" to="/login">
-              Log In
-            </NavLink> */}
             <a
               className="hamburguesa"
               href="/"

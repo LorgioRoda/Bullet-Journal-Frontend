@@ -14,9 +14,14 @@ class AuthProvider extends React.Component {
 
   componentDidMount() {
     //call base data
-    this.authService.isLoggedIn() //Si esta el usuario o no
+    this.authService
+      .isLoggedIn() //Si esta el usuario o no
       .then((response) => {
-        this.setState({ isLoading: false, isLoggedIn: true, user: response.data });
+        this.setState({
+          isLoading: false,
+          isLoggedIn: true,
+          user: response.data,
+        });
       })
       .catch(() => {
         this.setState({ isLoggedIn: false, isLoading: false, user: null });
@@ -26,14 +31,18 @@ class AuthProvider extends React.Component {
   signup = (data) => {
     this.authService
       .signup(data)
-      .then((response) => this.setState({ isLoggedIn: true, user: response.data }))
+      .then((response) =>
+        this.setState({ isLoggedIn: true, user: response.data })
+      )
       .catch(() => this.setState({ isLoggedIn: false, user: null }));
   };
 
   login = (data) => {
     this.authService
       .login(data)
-      .then((response) => this.setState({ isLoggedIn: true, user: response.data }))
+      .then((response) =>
+        this.setState({ isLoggedIn: true, user: response.data })
+      )
       .catch(() => this.setState({ isLoggedIn: false, user: null }));
   };
 
@@ -45,10 +54,11 @@ class AuthProvider extends React.Component {
   };
 
   edit = (data) => {
-    this.authService.edit(data)
-    .then(user => this.setState({ ...this.state, user: user.data}))
-    .catch(error => console.error(error))
-  }
+    this.authService
+      .edit(data)
+      .then((user) => this.setState({ ...this.state, user: user.data }))
+      .catch((error) => console.error(error));
+  };
 
   render() {
     const { isLoggedIn, isLoading, user } = this.state;
@@ -80,19 +90,21 @@ const withAuth = (WrappedComponent) => {
   //WappedComponent componente a conectar
 
   return function (props) {
-    return(
-    <Consumer>
-      {(value) => {
-        const { isLoading, isLoggedIn, user, signup, login, logout, edit } = value;
-        return (
-          <WrappedComponent
-            {...value} //line 86
-            {...props} //todas las props previas
-          />
-        );
-      }}
-    </Consumer>
-    )};
+    return (
+      <Consumer>
+        {(value) => {
+          const { isLoading, isLoggedIn, user, signup, login, logout, edit } =
+            value;
+          return (
+            <WrappedComponent
+              {...value} //line 95
+              {...props} //todas las props previas
+            />
+          );
+        }}
+      </Consumer>
+    );
+  };
 };
 
 export { AuthProvider, withAuth };

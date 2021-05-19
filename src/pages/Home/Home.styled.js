@@ -6,7 +6,6 @@ const SCHome = styled.section`
   align-item: center;
   }
 
-/*Aquí empieza el h1 */
 
 /* BODY */
 

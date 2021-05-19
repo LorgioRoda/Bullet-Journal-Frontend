@@ -57,7 +57,6 @@ class EditProfile extends Component {
 
   handleChange(event) {
     const { name, value, type, files } = event.target;
-    console.log(files);
     this.setState({
       fields: {
         ...this.state.fields,

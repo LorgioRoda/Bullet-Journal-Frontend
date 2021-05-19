@@ -16,7 +16,6 @@ export default class task extends Component {
     this.taskService
       .get()
       .then((response) => {
-        console.log(response.data);
         this.setState({ tasks: response.data }); ///Info response.data
       })
       .catch((err) => console.error(err));

@@ -11,7 +11,6 @@ export default function Task({ name, done, priority, id, refreshState }) {
     taskService
       .deleteOne(id)
       .then(() => {
-        console.log("Delete");
         refreshState();
       })
       .catch((err) => console.error());
@@ -20,7 +19,6 @@ export default function Task({ name, done, priority, id, refreshState }) {
     taskService
       .updateOne(id, data) //Data la info de los botones
       .then(() => {
-        console.log("Updated");
         refreshState();
       })
       .catch();
