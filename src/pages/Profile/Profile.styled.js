@@ -10,7 +10,7 @@ const SCProfile = styled.section`
   display:flex;
   text-align: center;
   justify-content: center;
-  top: 560px;
+  top: 563px;
   left: 54.3%;
   transform: rotate(-45deg);
   width: 120px;
@@ -28,6 +28,65 @@ const SCProfile = styled.section`
     background-color: #008dbd;
     z-index: 2;
   }
+
+  @media all and (max-width: 2200px){
+    .link-edit{
+        left: 53%;
+    }
+}
+
+@media all and (max-width: 1400px){
+    .link-edit{
+        left: 54.8%;
+    }
+}
+
+@media all and (max-width: 1200px){
+    .link-edit{
+        left: 55%;
+    }
+}
+
+  @media all and (max-width: 900px){
+    .link-edit{
+        left: 56%;
+    }
+}
+
+
+   @media all and (max-width: 900px){
+    .link-edit{
+        left: 57%;
+    }
+}
+
+ @media all and (max-width: 800px){
+    .link-edit{
+        left: 56%;
+    }
+}
+
+ @media all and (max-width: 700px){
+    .link-edit{
+        left: 57.5%;
+    }
+}
+
+  @media all and (max-width: 600px){
+    .link-edit{
+        left: 59%;
+    }
+}
+
+@media all and (max-width: 500px){
+    .link-edit{
+        left: 61%;
+    }
+
+@media all and (max-width: 400px){
+    .link-edit{
+        left: 64%;
+    }
 
 `;
 

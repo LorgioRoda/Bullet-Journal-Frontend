@@ -83,9 +83,25 @@ const SCEditProfile = styled.section`
                0 10px 10px #006E93;
   }
 
-  br{
-    font-size:10px;
-  }
+  @media all and (max-width: 900px){
+    .h2{
+        left: 20%;
+    }
+}
+
+@media all and (max-width: 550px){
+    .h2{
+        left: 10%;
+    }
+}
+
+@media all and (max-width: 450px){
+    .h2{
+        left: 5%;
+        transform: rotate(0deg);
+        font-size: 30px;
+    }
+}
 `;
 
 export default SCEditProfile;

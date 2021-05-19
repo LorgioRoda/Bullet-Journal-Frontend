@@ -58,6 +58,7 @@ const SCChronometer = styled.section`
     background-color: white;
     margin-top: 110px;
     margin-bottom:480px;
+    z-index: 2;
   }
 
   .display {
@@ -171,6 +172,13 @@ const SCChronometer = styled.section`
                0 8px 0 transparent,
                0 9px 0 transparent,
                0 10px 10px #006E93;
+}
+
+@media all and (max-width: 550px){
+    .h1{
+       top: 53%;
+       z-index:0;
+    }
 }
 `;
 export default SCChronometer;
