@@ -23,7 +23,7 @@ const SCTasklist = styled.section`
 
   .card {
     width: 300px;
-    height: 350px;
+    
     margin-top: 50px;
     border: 2px solid rgb(0, 110, 147);
     background-color: rgb(212, 230, 241);
