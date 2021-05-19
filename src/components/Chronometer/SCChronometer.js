@@ -172,9 +172,5 @@ const SCChronometer = styled.section`
                0 9px 0 transparent,
                0 10px 10px #006E93;
 }
-
-
-
-
 `;
 export default SCChronometer;
