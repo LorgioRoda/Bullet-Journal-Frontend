@@ -117,9 +117,7 @@ class Signup extends Component {
                   onChange={(e) => this.handleChange(e)}
                 />
               </div>
-              <SelectButtom type="submit">
-                Sign Up
-              </SelectButtom>
+              <SelectButtom type="submit">Sign Up</SelectButtom>
             </form>
           </div>
         </div>

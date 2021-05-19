@@ -46,7 +46,6 @@ class Login extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state.fields);
     this.props.login(this.state.fields);
   }
 
