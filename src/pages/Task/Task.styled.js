@@ -23,7 +23,6 @@ const SCTasklist = styled.section`
 
   .card {
     width: 300px;
-    
     margin-top: 50px;
     border: 2px solid rgb(0, 110, 147);
     background-color: rgb(212, 230, 241);
@@ -103,6 +102,38 @@ const SCTasklist = styled.section`
                0 9px 0 transparent,
                0 10px 10px #006E93;
   }
+
+@media all and (max-width: 1200px){
+    .h2{
+       top: 1%;
+       left: 30%;
+       
+    }
+}
+
+@media all and (max-width: 1000px){
+    .h2{
+       top: 1%;
+       left: 28%;
+       
+    }
+}
+
+@media all and (max-width: 800px){
+    .h2{
+       top: 1%;
+       left: 15%;
+       
+    }
+}
+
+  @media all and (max-width: 550px){
+    .h2{
+       top: 1%;
+       left: 7%
+       z-index:0;
+    }
+}
   
 `;
 
