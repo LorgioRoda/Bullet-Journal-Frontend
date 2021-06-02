@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+# Bullet-Journal
+### Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+------------
 
-## Available Scripts
 
-In the project directory, you can run:
+This is a list management app, to organize the user's daily life, create new  a personalized list to achieve their goals.
 
-### `npm start`
+### User Stories
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+------------
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+- 404: As an anon/user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault.
+- Signup: As an anon I can sign up in the platform.
+- Login: As a user I can login to the platform.
+- Logout: As a user I can logout from the platform.
+- Add Task: The user will be able to add, edit and delete his task.
+- Profile: The user will be able to have a personalized profile
+- Edit Profile: The user will be able to edit his profile
+- Chronometer: A special chronometer for performing tasks using the commodore method
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backlog
 
-### `npm run build`
+------------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### General
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Implementation of node mail
+- Passport with Google
 
-### `npm run eject`
+#### Tasks
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Follow-up of tasks with notification
+- Save deleted tasks
+- Notification by mail, reminding you of important tasks
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#####  React Router Routes (React App)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Path  | Component | Permissions | Behavior |
+------------- | ------------- | ------------- | -------------
+/  | Home |    Public  | Home page
+/signup   | Signup |    anonRoute  |Signup form, link to login, navigate to homepage after signup
+/login | Login |   anonRoute   | Login form, link to signup, navigate to homepage after login
+/profile  | User | PrivateRoute   |  User's private profile, with his or her information
+/edit-profile  | EditProfile | PrivateRoute  | The user will modify his profile content
+/task  | Task | PrivateRoute  | The user will modify his task
+/chronometer  | Chronometer | PrivateRoute   | A timer where you can edit and modify a template
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- NavBar
+- Signup
+- Login
+- User
+- Edit-Profile
+- Task
+- CreateTask
+- AnonRoute
+- Chronometer
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Services
 
-### Analyzing the Bundle Size
+------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**- Auth Service**
+- auth.login
+- auth.signup(user)
+- auth.logout()
+- auth.me()
 
-### Making a Progressive Web App
+**- Profile Services**
+- profile
+- profile/edit(user)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**- Chronometer**
+- Chronometer(user)
 
-### Advanced Configuration
+**- Task**
+- Create Task
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Models
 
-### `npm run build` fails to minify
+------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+**User:**
+
+```javascript
+username: { type: String, required: true, unique: true },
+password: { type: String, required: true},
+description: {type: String, default: ""},
+ email: {
+      type: String,
+      unique: true,
+      lowercase: true,
+      trim: true,
+      required: true}
+photo: {type: String, default: photo}
+profile_Background: {type: String, default: photo}
+```
+
+
+
+**Tasks:**
+```javascript
+name: { type: String, required: true },
+description: { type: String, maxlength: 250 },
+done: { type: Boolean, default: false },
+dueDate: { type: Date, default: Date.now() },
+priority: { type: Boolean, default: false },
+user: { type: Schema.Types.ObjectId, ref: "User" },
+```
+
+
+### API Endpoints (backend routes)
+
+------------
+
+
+
+HTTP Method  | URL | Request Body |  Success status	| Error Status |
+------------- | ------------- | ------------- | -------------
+Post  | /signup |    {id, email, password}  | 201| 404
+Post   | /login |    {email, password}  | 200 | 401
+Post | /auth/logout |   (empty)   | 204| 400
+Get | /profile | {req.user.id}   | 200 | 404
+Post  | /edit-Profile | {req.user.id}  | 200 | 404
+Get  | /task | {req.user}  | 200 | 404
+Delete | /profile/:id/delete | {req.params}| 200 |404
+
+
+
+
+
+[Deploy](https://bullet-journal-ironhack.herokuapp.com/ "Deploy")
+------------
+#### Trello/kanban:
+[Trello](https://trello.com/b/dfaA2h4F/proyecto-3)
