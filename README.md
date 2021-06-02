@@ -121,25 +121,6 @@ user: { type: Schema.Types.ObjectId, ref: "User" },
 ```
 
 
-### API Endpoints (backend routes)
-
-------------
-
-
-
-HTTP Method  | URL | Request Body |  Success status	| Error Status |
-------------- | ------------- | ------------- | -------------
-Post  | /signup |    {id, email, password}  | 201| 404
-Post   | /login |    {email, password}  | 200 | 401
-Post | /auth/logout |   (empty)   | 204| 400
-Get | /profile | {req.user.id}   | 200 | 404
-Post  | /edit-Profile | {req.user.id}  | 200 | 404
-Get  | /task | {req.user}  | 200 | 404
-Delete | /profile/:id/delete | {req.params}| 200 |404
-
-
-
-
 
 [Deploy](https://bullet-journal-ironhack.herokuapp.com/ "Deploy")
 ------------
